@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <script src="functions.js" defer></script>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css"/>
 
 
     <style>
@@ -22,7 +22,7 @@
         header {
             background: linear-gradient(to right, #712ac8, #aa21f3);
             color: #fff;
-            padding: 1.5rem;
+            /* padding: 1.5rem; */
             text-align: center;
             position: fixed;
             width: 100%;
@@ -32,14 +32,14 @@
 
         /* Add some space below the header to prevent content from being hidden behind it */
         body {
-            padding-top: 3.5rem;
+            padding-top: 2rem;
             /* Adjust this value based on the height of your header */
         }
 
         /* Style for the smaller header on smaller devices */
         @media (max-width: 600px) {
             header {
-                padding: 0.75rem;
+                padding: 1vmax;
                 /* Adjust the height for smaller devices */
             }
 
@@ -98,6 +98,19 @@
             
 
         }
+        .metal-container {
+            background:url('assets/metal.png') center/cover;
+            display: flex;
+            justify-content: space-between;
+            padding: 2rem;
+            
+            width: 100%;
+            /* Less wide */
+
+          
+            
+
+        }
 
         .purple-container:hover {
             transform: scale(1.05);
@@ -137,31 +150,30 @@
 
         /* Paragraph inside the container content */
         .container-content p {
-            font-size: 3vw;
+            font-size: 2vw;
             /* Adjust the font size for the paragraph */
         }
         .container-content h2 {
             font-size: 3vw;
             /* Adjust the font size for the paragraph */
         }
-        .slide-in-container {
-            opacity: 0;
-            transform: translateX(-100%);
-            transition: opacity 1s, transform 1s;
+        .paragraph {
+            max-width: 45%;
+            font-size: 4vw; /* Increase the font size for larger paragraphs */
         }
-
-        .slide-in-container.show {
-            opacity: 1;
-            transform: translateX(0);
+        .bi-bi-arrow-left-square-fill{
+            font-size: 4vw;
         }
+        .icon {
+            font-size: 4.5vw; /* Adjust the font-size to make the icon bigger */
+        }
+     
+        
+        
        
     </style>
-    <title>Site Header</title>
 </head>
-
 <body>
-    
-
     <body>
         <!-- big header on top of page -->
         <header class="flex justify-between items-center px-3 py-2">
@@ -169,7 +181,7 @@
                 <a href="index.html" class="underline decoration-solid text-white">Acasa</a>
             </div>
             <div class="text-sm sm:text-l md:text-xl lg:text-2xl xl:text-3xl">
-                <h2 id="color-changing-title" class=" hidden sm:inline font-extrabold text-l sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl ">
+                <h2 id="color-changing-title" class="max-width:auto hidden sm:inline font-extrabold text-l sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl ">
                     Scoala Robotilor
                 </h2>
             </div>
@@ -183,52 +195,35 @@
                 </div>     
                    </div>
         </header>
-    </header>
+        <div class="content text-white">
+            <img id="mainImage" src="assets/r2d2.png" alt="Main Page Image">
+            <!-- Add more content as needed -->
+            <div class="purple-container align-left">
+                <img id="container-image" src="assets/r2d22.png" alt="Left Image">
+                <div class="container-content flex-collum">
+                    <h1 flex>Explorator cu Secrete și Control Jedi</h1>
+                    <p>Descoperă universul Star Wars cu R2D2, robotul controlabil care îndeplinește misiuni secrete și răspunde la comenzi cu coduri misterioase. Îl poți manevra cu gesturi Jedi, aducând magia Star Wars direct în mâinile tale!</p>
+                </div>
+            </div>
     
-    
-    
-    
-    
-
-
-    <div class="content text-white">
-        <img id="mainImage" src="assets/MainPage1.png" alt="Main Page Image">
-        <!-- Add more content as needed -->
-        <div class="purple-container align-left">
-            <img id="container-image" src="assets/MainPage2.png" alt="Left Image">
-            <div class="container-content flex-collum">
-                <h1 flex>Construieste si controleaza roboti</h1>
-                <p>Vom invata cum sa construiesti roboti ca la carte sau dupa propria imaginatie</p>
+            <div class="purple-container align-right">
+                <div class="container-content flex-collum">
+                    <h1>Navighează prin Galaxie cu Efort Minim</h1>
+                    <p>Adună-ți forța și explorează galaxia cu robotul controlat gestual. Cu mișcări intuitive, acest companion aduce senzația de a manevra obiecte virtuale într-o aventură interactivă. O experiență Star Wars autentică, la îndemâna ta!</p>
+                </div>
+                <img id="container-image" src="https://i5.walmartimages.com/asr/fc3e06eb-0502-44e7-84eb-cb213ca40590_1.48fcd53acdb21bf9d066c68097845f3a.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF" alt="Right Image">
             </div>
         </div>
 
-        <div class="purple-container align-right">
-            <div class="container-content flex-collum">
-                <h1>Programeaza</h1>
-                <p>Vom scrie cod astfel incat robotii vor face actiuni fara telecomanda</p>
-            </div>
-            <img id="container-image" src="assets/MainPage3.jpg" alt="Right Image">
+        <div class="metal-container align-center">
+                <i class="icon bi-arrow-left-square-fill "></i>
+                <p class="paragraph ">Robotu Anterior</p>
+                <p class="paragraph">Robotu Urmator</p>
+                <i class="icon bi bi-arrow-right-square-fill"></i>
+        
         </div>
-
-        <div class="purple-container align-left">
-            <img id="container-image" src="assets/MainPage4.png" alt="Left Image">
-            <div class="container-content flex-collum">
-                <h1 flex>Completeaza Misiuni</h1>
-                <p>Fiecare Robot are o aplicatie speciala, in care poti face misiuni si in care inveti moduri noi de a
-                    construi roboti </p>
-            </div>
-        </div>
+       
     </div>
     
-    <div class="purple-container">
-        <div class="container-content flex-collum ">
-           <a href="r2d2.html">
-
-               <p>🤖Ｈａｉｄｅ　ｓａ　ｉｎｔａｌｎｉｍ　ｒｏｂｏｔｉｉ⚡️</p>
-           </a>
-        </div>
-    </div>
-
 </body>
-
 </html>

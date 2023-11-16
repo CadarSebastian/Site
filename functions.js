@@ -32,3 +32,4 @@ function changeColors() {
     // Change colors every second
     setInterval(changeColors, 1000);
 });
+

@@ -4,8 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://i.pinimg.com/originals/1a/a2/00/1aa2008c04d15f46d38b797cb1452ed4.gif') center/cover;
+            /* Replace 'your-space-gif-url.gif' with the actual URL */
+        }
+
+        header {
+            background: linear-gradient(to right, #712ac8, #aa21f3);
+            color: #fff;
+            padding: 1.5rem;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
+
+        /* Add some space below the header to prevent content from being hidden behind it */
+        body {
+            padding-top: 5rem;
+            /* Adjust this value based on the height of your header */
+        }
+
+        /* Style for the smaller header on smaller devices */
+        @media (max-width: 600px) {
+            header {
+                padding: 0.75rem;
+                /* Adjust the height for smaller devices */
+            }
+
+            body {
+                padding-top: 4rem;
+                /* Adjust this value based on the height of your smaller header */
+            }
+
+            .content {
+                margin-top: 0rem;
+                /* Adjust the margin-top for smaller devices */
+            }
+
+        }
+    </style>
 </head>
 <body>
-    
+    <header class="flex justify-between ">
+        <h1 class="text-base sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl"><a href="index.html">Acasa</a></h1>
+        <h2 class="text-base sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl"><a href="locatii.html">Locatii</a></h2>
+        <h3 class="text-base sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl"><a href="orare.html">Orare</a></h3>
+        <h4 class="text-base sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl"><a href="inscrieri.html">Inscrieri</a></h4>
+        <h5 class="text-base sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl"><a href="contactare.html">Contactare</a></h5>
+
+    </header>
 </body>
 </html>

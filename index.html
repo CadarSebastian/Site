@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://i.pinimg.com/originals/1a/a2/00/1aa2008c04d15f46d38b797cb1452ed4.gif') center/cover;
+            /* Replace 'your-space-gif-url.gif' with the actual URL */
+        }
+
+        header {
+            background: linear-gradient(to right, #712ac8, #aa21f3);
+            color: #fff;
+            padding: 1.5rem;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
+
+        /* Add some space below the header to prevent content from being hidden behind it */
+        body {
+            padding-top: 5rem;
+            /* Adjust this value based on the height of your header */
+        }
+
+        /* Style for the smaller header on smaller devices */
+        @media (max-width: 600px) {
+            header {
+                padding: 0.75rem;
+                /* Adjust the height for smaller devices */
+            }
+
+            body {
+                padding-top: 4rem;
+                /* Adjust this value based on the height of your smaller header */
+            }
+
+            .content {
+                margin-top: 0rem;
+                /* Adjust the margin-top for smaller devices */
+            }
+
+        }
+
+        /* Some additional styling for the content */
+        .content {
+            padding: 0rem;
+            margin-top: -1rem;
+            /* Adjust this value based on the height of your header and desired spacing */
+        }
+
+        /* Style for the image */
+        #mainImage {
+            display: block;
+            margin: auto;
+            /* Center the image horizontally */
+            max-width: 100%;
+            /* Ensure the image doesn't exceed its natural size */
+            height: auto;
+            /* Maintain aspect ratio */
+        }
+
+        .purple-container {
+            background: linear-gradient(to right, #712ac8, #aa21f3);
+            padding: 1rem;
+            /* Add padding to create space around the container */
+            border-radius: 0.5rem;
+            /* Add border radius for rounded corners */
+            margin-top: 1rem;
+            /* Adjust the margin-top based on your design */
+
+
+            width: 90%;
+            /* Less wide */
+
+            max-height: 20rem;
+            /* Longer */
+            margin-left: auto;
+            /* Center horizontally */
+            margin-right: auto;
+            display: flex;
+            /* Use flexbox to align items */
+            align-items: center;
+            transition: transform 0.3s ease-in-out;
+
+        }
+
+        .purple-container:hover {
+            transform: scale(1.05);
+            /* Scale up to 110% on hover */
+        }
+
+        #container-image {
+            display: block;
+            margin: auto;
+            /* Center the image horizontally */
+            max-width: 50%;
+            /* Ensure the image doesn't exceed its natural size */
+            height: auto;
+            max-height: 14rem;
+            align-self: flex-start;
+            border-radius: 0.90rem;
+            padding: 0.5rem;
+        }
+
+        .container-content {
+            flex-grow: 1;
+            font-size: 2vw;
+            /* Allow the content to take up remaining space */
+            text-align: center;
+            /* Center the text */
+        }
+
+        /* Header inside the container content */
+        .container-content h1 {
+            font-size: 4vw;
+            /* Adjust the font size for the header */
+            font-weight: bold;
+            /* Make the header thicker */
+            margin-bottom: 0.5rem;
+            /* Add some space between the header and paragraph */
+        }
+
+        /* Paragraph inside the container content */
+        .container-content p {
+            font-size: 3vw;
+            /* Adjust the font size for the paragraph */
+        }
+    </style>
+    <title>Site Header</title>
+</head>
+
+<body>
+    <header class="flex justify-between ">
+        <h1 class="text-base sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl"><a href="index.html">Acasa</a></h1>
+        <h2 class="text-base sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">Locatii</h2>
+        <h3 class="text-base sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">Orare</h3>
+        <h4 class="text-base sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">Inscrieri</h4>
+        <h5 class="text-base sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">Contactare</h5>
+
+    </header>
+    <!-- <header>
+        <div class="container mx-auto">
+            <div class="container mx-auto">
+                <div class="flex justify-between">
+                    <h1 class="text-base sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl"><a href="index.html">Acasa</a></h1>
+                    <div class="flex">
+                        <div class="flex items-center">
+                            <h2 class="text-base sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">Locatii</h2>
+                            <h3 class="text-base sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">Orare</h3>
+                            <h4 class="text-base sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">Inscrieri</h4>
+                            <h5 class="text-base sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">Contactare</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header> -->
+
+
+
+    <div class="content text-white">
+        <img id="mainImage" src="assets/MainPage1.png" alt="Main Page Image">
+        <!-- Add more content as needed -->
+        <div class="purple-container align-left">
+            <img id="container-image" src="assets/MainPage2.png" alt="Left Image">
+            <div class="container-content flex-collum">
+                <h1 flex>Construieste si controleaza roboti</h1>
+                <p>Vom invata cum sa construiesti roboti ca la carte sau dupa propria imaginatie</p>
+            </div>
+        </div>
+
+        <div class="purple-container align-right">
+            <div class="container-content flex-collum">
+                <h1>Programeaza</h1>
+                <p>Vom scrie cod astfel incat robotii vor face actiuni fara telecomanda</p>
+            </div>
+            <img id="container-image" src="assets/MainPage3.jpg" alt="Right Image">
+        </div>
+
+        <div class="purple-container align-left">
+            <img id="container-image" src="assets/MainPage4.png" alt="Left Image">
+            <div class="container-content flex-collum">
+                <h1 flex>Completeaza Misiuni</h1>
+                <p>Fiecare Robot are o aplicatie speciala, in care poti face misiuni si in care inveti moduri noi de a
+                    construi roboti </p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
